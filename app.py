@@ -16,7 +16,7 @@ similarity = cosine_similarity(vectors)
 # Fetch poster from TMDB API
 def fetch_poster(movie_id):
     try:
-        url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=YOUR_API_KEY"
+        url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=cded3c2444e943d4b491b8de1df1885a"
         data = requests.get(url, timeout=5).json()
         poster_path = data['poster_path']
         full_path = "https://image.tmdb.org/t/p/w500" + poster_path
@@ -143,3 +143,4 @@ if st.button('Recommend'):
 # ```
 
 # streamlit run app.py
+
